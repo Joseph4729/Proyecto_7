@@ -4,9 +4,10 @@ export default StyleSheet.create({
 
   container: {
     flex: 1,
-    justifyContent: "center",
+    justifyContent: "flex-start", // 👈 antes estaba centrado
     alignItems: "center",
-    backgroundColor: "#ffffff"
+    paddingTop: 40,
+    backgroundColor: "#fff"
   },
 
   title: {
@@ -23,12 +24,11 @@ export default StyleSheet.create({
   },
 
   mapBox: {
-    width: 600,
-    height: 500,
-    borderWidth: 20,
+    width: "90%",
+    height: "70%",  // 👈 ocupa la mayor parte de la pantalla
     borderRadius: 20,
     overflow: "hidden",
-    marginBottom: 30
+    marginBottom: 20
   },
 
   map: {
@@ -47,6 +47,53 @@ export default StyleSheet.create({
     color: "white",
     fontSize: 18,
     fontWeight: "bold"
-  }
+  },
+
+  searchInput: {
+  width: "92%",
+  height: 45,
+  borderWidth: 1,
+  borderColor: "#ccc",
+  borderRadius: 10,
+  paddingHorizontal: 15,
+  backgroundColor: "white",
+  marginBottom: 10
+},
+
+resultsBox: {
+  width: "92%",
+  backgroundColor: "white",
+  borderRadius: 10,
+  marginBottom: 10,
+  maxHeight: 180
+},
+
+resultItem: {
+  padding: 12,
+  borderBottomWidth: 1,
+  borderBottomColor: "#eee"
+},
+
+scrollContainer: {
+  flexGrow: 1,
+  alignItems: "center",
+  paddingBottom: 40
+},
+
+floatingButton: {
+  position: "absolute",
+  bottom: 20,
+  right: 20,
+  backgroundColor: "#4285F4",
+  paddingVertical: 12,
+  paddingHorizontal: 16,
+  borderRadius: 30,
+  zIndex: 999
+},
+
+floatingText: {
+  color: "white",
+  fontWeight: "bold"
+},
 
 });
